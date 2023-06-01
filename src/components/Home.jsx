@@ -1,3 +1,5 @@
+import Contact from "./Contact";
+import CotizElement from "./CotizElement";
 import Hero from "./Hero";
 import Services from "./Services";
 import Sponsors from "./Sponsors";
@@ -11,7 +13,9 @@ const Home = () => {
 			<Sponsors />
 			<Services />
 			<Works />
+			<CotizElement />
 			<Testimonials />
+			<Contact />
 		</div>
 	);
 };

@@ -1,13 +1,14 @@
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { GrMail } from "react-icons/gr";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
 	return (
 		<div className="bg-white h-16 mx-auto flex justify-between items-center p-4 sticky top-0 z-20 bg-backblue-200  shadow-[0px_0px_20px_5px_#00000024]">
 			{/* Left */}
-			<a href="#" className="flex items-center gap-6">
+			<a href="/" className="flex items-center gap-6">
 				<img
 					src="https://content.wepik.com/statics/30190099/preview-page0.jpg"
 					alt="logo"
@@ -16,23 +17,29 @@ const Navbar = () => {
 			</a>
 			<div className="hidden md:flex items-center cursor-pointer font-medium gap-10 p-1">
 				<a
-					href="#servicios"
+					href="/#servicios"
 					className="border-y-2 py-1 border-transparent hover:border-aztec-600 hover:text-aztec-600 ease-in duration-300"
 				>
 					Servicios
 				</a>
 				<a
-					href="#trabajos"
+					href="/#trabajos"
 					className="border-y-2 py-1 border-transparent hover:border-aztec-600 hover:text-aztec-600 ease-in duration-300"
 				>
 					Nuestros trabajos
 				</a>
 				<a
-					href="#testimonios"
+					href="/#testimonios"
 					className="border-y-2 py-1 border-transparent hover:border-aztec-600 hover:text-aztec-600 ease-in duration-300"
 				>
 					Clientes
 				</a>
+				<Link
+					to="/cotizador"
+					className="border-y-2 py-1 border-transparent hover:border-aztec-600 hover:text-aztec-600 ease-in duration-300"
+				>
+					Cotizador online
+				</Link>
 			</div>
 			<div
 				className="cursor-pointer md:hidden"
@@ -75,27 +82,35 @@ const Navbar = () => {
 				<nav>
 					<ul className="my-32 flex flex-col px-4 py-8 gap-10 justify-center items-center text-xl text-black">
 						<a
-							href="#servicios"
+							href="/#servicios"
 							onClick={() => setNav(false)}
 							className="border-y-2 py-1 border-transparent hover:border-aztec-600 hover:text-aztec-600 ease-in duration-300 flex"
 						>
 							Servicios
 						</a>
 						<a
-							href="#trabajos"
+							href="/#trabajos"
 							onClick={() => setNav(false)}
 							className="border-y-2 py-1 border-transparent hover:border-aztec-600 hover:text-aztec-600 ease-in duration-300 flex"
 						>
 							Nuestros Trabajos
 						</a>
 						<a
-							href="#testimonios"
+							href="/#testimonios"
 							onClick={() => setNav(false)}
 							className="border-y-2 py-1 border-transparent hover:border-aztec-600 hover:text-aztec-600 ease-in duration-300 flex"
 						>
 							<GrMail size={25} className="mr-4" />
 							Clientes
 						</a>
+						<Link
+							to="/cotizador"
+							onClick={() => setNav(false)}
+							className="border-y-2 py-1 border-transparent hover:border-aztec-600 hover:text-aztec-600 ease-in duration-300 flex"
+						>
+							<GrMail size={25} className="mr-4" />
+							Cotizador Online
+						</Link>
 					</ul>
 				</nav>
 			</div>

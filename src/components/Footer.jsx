@@ -1,4 +1,4 @@
-import { BsMailbox, BsTwitter, BsWhatsapp } from "react-icons/bs";
+// import { BsMailbox, BsTwitter, BsWhatsapp } from "react-icons/bs";
 const Footer = () => {
 	return (
 		<footer className="w-full bg-black shadow-[0px_0px_20px_5px_#00000024] py-4">
@@ -6,7 +6,7 @@ const Footer = () => {
 				<div className="flex flex-col font-semibold self-center text-sm md:block text-white">
 					<span>©{new Date().getFullYear()} All rights reserved</span>
 				</div>
-				<div className="flex justify-center space-x-4 lg:pt-0 lg:col-end-13">
+				{/* <div className="flex justify-center space-x-4 lg:pt-0 lg:col-end-13">
 					<a
 						rel="noopener noreferrer"
 						href="https://www.twitter.com"
@@ -34,7 +34,7 @@ const Footer = () => {
 					>
 						<BsWhatsapp />
 					</a>
-				</div>
+				</div> */}
 			</div>
 		</footer>
 	);
